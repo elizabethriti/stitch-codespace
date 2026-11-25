@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Publish to GitHub Pages
 
 on:
   push:
@@ -6,16 +6,16 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
   cancel-in-progress: true
 
 jobs:
-  build:
+  publish:
+    # Skip the commit this workflow creates, so it cannot loop.
+    if: ${{ github.event_name == 'workflow_dispatch' || !contains(github.event.head_commit.message, '[pages build]') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -34,19 +34,17 @@ jobs:
         working-directory: app
         run: npm run build
 
-      - uses: actions/configure-pages@v5
+      - name: Copy the built site to the Pages location
+        run: |
+          rm -rf index.html 404.html .nojekyll assets images favicon.svg icons.svg
+          cp -a app/dist/. .
 
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: app/dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Commit the published site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "[pages build] Update published site"
+            git push
+          fi
