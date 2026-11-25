@@ -9,6 +9,21 @@
       content="Lizzie's Pizza — hand-tossed sourdough pies, diner sides, and cold sips. Order online for delivery or pickup."
     />
     <title>Lizzie's Pizza · Menu &amp; Order</title>
+    <!-- GitHub Pages deep-link fix: turns ?/checkout back into /checkout. -->
+    <script>
+      (function () {
+        var l = window.location
+        var match = l.search.match(/^\?\/(.*)$/)
+        if (!match) return
+        var raw = match[1]
+        var split = raw.indexOf('&')
+        var path = split === -1 ? raw : raw.slice(0, split)
+        var query = split === -1 ? '' : raw.slice(split + 1).replace(/~and~/g, '&')
+        var url = '/stitch-codespace/' + path.replace(/~and~/g, '&')
+        if (query) url += '?' + query
+        history.replaceState(null, '', url + l.hash)
+      })()
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

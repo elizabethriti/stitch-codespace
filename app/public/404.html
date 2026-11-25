@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <!-- GitHub Pages fallback: send /checkout back through index.html. -->
+    <script>
+      (function () {
+        var l = window.location
+        var parts = l.pathname.split('/').filter(Boolean)
+        var appPath = parts.slice(1).join('/').replace(/&/g, '~and~')
+        var url = '/' + parts[0] + '/?/' + appPath
+        if (l.search && l.search.length > 1) {
+          url += '&' + l.search.slice(1).replace(/&/g, '~and~')
+        }
+        l.replace(url + l.hash)
+      })()
+    </script>
+  </head>
+  <body></body>
+</html>
