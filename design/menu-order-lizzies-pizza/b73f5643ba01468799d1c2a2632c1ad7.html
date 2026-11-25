@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;700;800&amp;family=Karla:wght@400;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed": "#ffdeae", "primary-fixed-dim": "#ffb4a9", "tertiary-container": "#9c6b00", "surface": "#fff8f6", "outline-variant": "#e6bdb7", "on-tertiary-fixed-variant": "#604100", "background": "#fff8f6", "surface-container-high": "#fee2dc", "on-secondary-container": "#6d6164", "on-primary-container": "#fffcff", "primary": "#bb0507", "surface-container-highest": "#f8ddd7", "surface-dim": "#efd4cf", "outline": "#916f6a", "on-primary-fixed-variant": "#930003", "on-tertiary-container": "#fffbff", "on-secondary-fixed-variant": "#4f4447", "primary-fixed": "#ffdad5", "on-background": "#261815", "surface-container-lowest": "#ffffff", "surface-variant": "#f8ddd7", "surface-tint": "#be0a0a", "surface-container-low": "#fff0ee", "inverse-surface": "#3d2c29", "inverse-on-surface": "#ffede9", "surface-container": "#ffe9e5", "on-surface": "#261815", "on-error": "#ffffff", "on-surface-variant": "#5d403b", "tertiary": "#7c5400", "on-tertiary-fixed": "#281900", "surface-bright": "#fff8f6", "on-secondary-fixed": "#22191c", "on-tertiary": "#ffffff", "secondary": "#675b5e", "error-container": "#ffdad6", "on-secondary": "#ffffff", "error": "#ba1a1a", "primary-container": "#e02b20", "secondary-container": "#efdee1", "inverse-primary": "#ffb4a9", "on-primary-fixed": "#410000", "secondary-fixed-dim": "#d2c3c6", "tertiary-fixed-dim": "#fdba45" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-md": "1rem", "margin": "2.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "margin-mobile": "1.25rem", "gutter-mobile": "1rem" }, "fontFamily": { "headline-sm": [ "Bricolage Grotesque" ], "body-lg": [ "Karla" ], "headline-xl": [ "Bricolage Grotesque" ], "body-md": [ "Karla" ], "label-sm": [ "Karla" ], "label-md": [ "Karla" ], "headline-lg-mobile": [ "Bricolage Grotesque" ], "headline-lg": [ "Bricolage Grotesque" ], "headline-xl-mobile": [ "Bricolage Grotesque" ], "label-lg": [ "Karla" ], "headline-md": [ "Bricolage Grotesque" ], "body-sm": [ "Karla" ] }, "fontSize": { "headline-sm": [ "22px", { "lineHeight": "28px", "fontWeight": "600" } ], "body-lg": [ "18px", { "lineHeight": "26px", "fontWeight": "400" } ], "headline-xl": [ "56px", { "lineHeight": "60px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "body-md": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" } ], "label-md": [ "13px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "700" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "headline-lg": [ "40px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-xl-mobile": [ "36px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "label-lg": [ "16px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "700" } ], "headline-md": [ "28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-sm": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-primary text-on-primary py-space-xs px-margin"><div class="w-full flex items-center justify-between font-label-sm text-label-sm uppercase tracking-wider"><span>Wood-Fired • Sourdough Crust • NYC-Style Neo Diner</span><div class="flex items-center gap-space-md"><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-label-sm">call</span>(212) 555-PIZZA</span><span class="hidden md:inline-block bg-tertiary-container text-on-tertiary-container px-space-sm py-0.5 rounded-full font-label-sm text-label-sm font-bold">Open for Delivery &amp; Pickup</span></div></div></div><div class="h-20 w-full px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-gutter"><a class="flex items-center gap-space-sm group" data-path="menu-and-order" href="#"><div class="bg-primary px-space-md py-space-xs rounded-full shadow-[2px_2px_0px_#261815] transition-transform group-hover:scale-105 flex items-center gap-space-xs"><span class="material-symbols-outlined text-on-primary">local_pizza</span><span class="font-headline-sm text-headline-sm text-on-primary tracking-tight font-extrabold">Lizzie's</span></div><span class="font-headline-sm text-headline-sm text-primary tracking-tight uppercase font-bold hidden sm:inline-block">Pizza</span></a><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-surface-container text-primary font-bold"><a class="font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface px-space-md py-space-sm rounded-full transition-all" data-path="menu-and-order" href="#">Menu &amp; Order</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface px-space-md py-space-sm rounded-full transition-all" data-path="checkout-review-order" href="#">Checkout / Review Order</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface px-space-md py-space-sm rounded-full transition-all" data-path="about" href="#">About</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface px-space-md py-space-sm rounded-full transition-all" data-path="contact" href="#">Contact</a></nav></div><div class="flex items-center gap-space-md"><a class="relative flex items-center justify-center w-11 h-11 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors" data-path="checkout-review-order" href="#"><span class="material-symbols-outlined">shopping_bag</span><span class="absolute -top-1 -right-1 w-5 h-5 bg-primary text-on-primary rounded-full font-label-sm text-label-sm flex items-center justify-center shadow-[1px_1px_0px_#261815]">3</span></a><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[1px_1px_0px_#261815]" src="https://lh3.googleusercontent.com/aida/AEtjO1XTzK99qny6jNawj2fsxqy2ZWuuRitWbLFzei7ZiuUX8ygf4uR2BxKyxeXQkB3ROC0AAh8JwIMUOePQZ9KjDJLuZbbRtf8U8OlCQOLZuRb2N4GVfk-dFoRHnwS39XAj9AFkyCBVFeJvhycGVv54dkjCbOls0LTvzsugRncalc5xoVy7A8rbaJavcEzUeUcpdcEkaCgf8Uo_N9N2K8pUMFUb8tcgyYgEl3gtCJ0MhTlYC4a4Z8CjQQbGANokgjZHIz9C1c9I_gloiBI"/></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Retro Diner Promo Ribbon -->
+<div class="w-full bg-primary-container text-on-primary py-space-sm px-margin flex items-center justify-between overflow-x-auto text-nowrap shadow-[0_2px_0px_#261815]">
+<div class="flex items-center gap-space-md mx-auto font-label-md text-label-md uppercase tracking-wider">
+<span class="flex items-center gap-1 font-bold">✨ Handcrafted Daily</span>
+<span class="opacity-40">•</span>
+<span class="flex items-center gap-1 font-bold">🧀 Real Wisconsin Mozzarella</span>
+<span class="opacity-40">•</span>
+<span class="flex items-center gap-1 font-bold">🍅 Slow-Simmered Family Recipe Sauce</span>
+<span class="opacity-40">•</span>
+<span class="flex items-center gap-1 font-bold">🔥 850° Woodstone Hearth Oven</span>
+</div>
+</div>
+<!-- Hero Header Banner directly inspired by vintage Lizzie's typography ribbon -->
+<div class="w-full px-margin-mobile md:px-margin pt-space-lg pb-space-md">
+<div class="w-full bg-surface-container-low rounded-lg p-space-md md:p-space-xl relative overflow-hidden shadow-[3px_3px_0px_#261815]">
+<!-- 70s Diner decorative backdrop pills -->
+<div class="absolute -top-12 -right-12 w-64 h-64 rounded-full bg-surface-container-high opacity-40 pointer-events-none"></div>
+<div class="absolute -bottom-16 -left-10 w-48 h-48 rounded-full bg-primary-fixed opacity-30 pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="max-w-2xl text-center md:text-left">
+<div class="inline-flex items-center gap-space-xs bg-surface px-space-md py-space-xs rounded-full shadow-[2px_2px_0px_#261815] mb-space-sm">
+<span class="material-symbols-outlined text-primary text-body-sm" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary font-bold">Order Online • Fresh • Fast</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface tracking-tight leading-none mb-space-sm font-extrabold">
+            Lizzie's Fresh Hand-Tossed Pizza &amp; Diner Eats
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            Sourdough naturally proofed for 72 hours, crushed Jersey tomatoes, hand-stretched daily with love, warmth, and retro cheer.
+          </p>
+</div>
+<!-- Lizzie's Oval Badge echoing the inspiration graphic -->
+<div class="flex-shrink-0 flex flex-col items-center justify-center p-space-md bg-surface rounded-full shadow-[3px_3px_0px_#bb0507] w-44 h-28 md:w-56 md:h-36 text-center transform hover:rotate-1 transition-transform">
+<span class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary font-extrabold tracking-tight italic" style="font-family: 'Bricolage Grotesque', cursive;">Lizzie’s</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-tertiary font-bold -mt-1">Pie Parlor • NYC</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Ordering Experience: Split 70% Menu Grid / 30% Sticky Cart Panel -->
+<div class="w-full px-margin-mobile md:px-margin pb-space-xl">
+<div class="flex flex-col lg:flex-row gap-gutter items-start">
+<!-- LEFT 70% Interactive Menu Column -->
+<div class="w-full lg:w-[68%] flex flex-col gap-space-xl">
+<!-- Navigation Filter Pill Tabs -->
+<div class="sticky top-20 z-30 bg-surface/95 backdrop-blur-md py-space-sm flex items-center gap-space-sm overflow-x-auto text-nowrap">
+<a class="px-space-lg py-space-xs bg-primary text-on-primary rounded-full font-label-lg text-label-lg uppercase tracking-wider shadow-[2px_2px_0px_#261815] transition-all hover:-translate-y-0.5" href="#section-pizzas">Pizzas</a>
+<a class="px-space-lg py-space-xs bg-surface-container-high text-on-surface hover:bg-surface-container-highest rounded-full font-label-lg text-label-lg uppercase tracking-wider transition-colors" href="#section-sides">Diner Sides</a>
+<a class="px-space-lg py-space-xs bg-surface-container-high text-on-surface hover:bg-surface-container-highest rounded-full font-label-lg text-label-lg uppercase tracking-wider transition-colors" href="#section-drinks">Sodas &amp; Drinks</a>
+<div class="ml-auto hidden sm:flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block animate-pulse"></span>
+            Oven Temp: 850°F Ready
+          </div>
+</div>
+<!-- ================= SECTION 1: PIZZAS ================= -->
+<section class="scroll-mt-36" id="section-pizzas">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Category 01</span>
+<span class="h-1 w-6 bg-primary rounded-full"></span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight">Whole Hand-Stretched Pies</h2>
+</div>
+<span class="bg-surface-container px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant font-bold hidden sm:inline-block">5 Signature Pies</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Pizza 1: Pepperoni (HAS SIZES) -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between shadow-[2px_2px_0px_#261815] hover:shadow-[4px_4px_0px_#261815] transition-all" data-item="pepperoni">
+<div>
+<div class="relative w-full h-44 rounded bg-surface-container-high overflow-hidden mb-space-sm">
+<img class="w-full h-full object-cover" data-alt="Wood-fired crispy pepperoni pizza with cupped charred pepperoni slices, bubbly melted mozzarella, and fresh basil against a retro 1970s cream and diner-red tiled table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC21nj2ty0YEHPB7ziR0BPhJqQSvOW0x5Hw4pLFbMluDRefvvmnJRQnsRqhqRL5viIGXw_aVpBjifHUZorlTH-PM_dE1YN4gtf76nG7bXZGks3DvvCCpzIfNiuOI0P-uWawq3Gv_cYPJkKz8W3RADT07nyl5uQxSKVgN_gckKYr6WIiBrDMpnAFJK2Mq5A31err16meOsaeX0MpDCgX2U9rWBzxO61dhOmia91a9FhCCXRnrcchgt3V8A"/>
+<span class="absolute top-2 left-2 bg-primary text-on-primary px-space-sm py-0.5 rounded-full font-label-sm text-label-sm font-bold uppercase shadow-[1px_1px_0px_#261815]">Most Popular</span>
+</div>
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Pepperoni Crisp</h3>
+<span class="item-price font-headline-sm text-headline-sm text-primary font-bold" data-base="14.00">$14.00</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  Cupping spicy pepperoni, whole milk mozzarella, pecorino romano, and house Jersey crushed tomato sauce.
+                </p>
+<!-- Size Selector (HAS SIZES) -->
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1">Select Size:</span>
+<div class="grid grid-cols-3 gap-space-xs size-selector">
+<button class="size-btn active-size bg-primary text-on-primary py-1.5 px-2 rounded-full font-label-sm text-label-sm text-center shadow-[1px_1px_0px_#261815] transition-transform" data-price="14.00" data-size='Small 10"' type="button">
+                      10" $14.00
+                    </button>
+<button class="size-btn bg-surface-container-highest text-on-surface hover:bg-surface-container py-1.5 px-2 rounded-full font-label-sm text-label-sm text-center transition-colors" data-price="18.50" data-size='Medium 14"' type="button">
+                      14" $18.50
+                    </button>
+<button class="size-btn bg-surface-container-highest text-on-surface hover:bg-surface-container py-1.5 px-2 rounded-full font-label-sm text-label-sm text-center transition-colors" data-price="22.00" data-size='Large 16"' type="button">
+                      16" $22.00
+                    </button>
+</div>
+</div>
+</div>
+<!-- Stepper & Add -->
+<div class="flex items-center justify-between pt-space-sm bg-surface-container rounded px-space-sm py-space-xs">
+<div class="flex items-center bg-surface rounded-full shadow-[1px_1px_0px_#261815] p-0.5">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm decrease-btn" type="button">−</button>
+<span class="qty-display w-7 text-center font-label-md text-label-md font-bold text-on-surface">1</span>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm increase-btn" type="button">+</button>
+</div>
+<button class="add-to-cart-btn bg-primary text-on-primary px-space-md py-space-xs rounded-full font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#261815] hover:scale-105 active:scale-95 transition-transform flex items-center gap-1" type="button">
+<span>Add to Order</span>
+<span class="material-symbols-outlined text-label-md">add_circle</span>
+</button>
+</div>
+</div>
+<!-- Pizza 2: Classic Cheese (HAS SIZES) -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between shadow-[2px_2px_0px_#261815] hover:shadow-[4px_4px_0px_#261815] transition-all" data-item="cheese">
+<div>
+<div class="relative w-full h-44 rounded bg-surface-container-high overflow-hidden mb-space-sm">
+<img class="w-full h-full object-cover" data-alt="Classic New York style cheese pizza with glistening melted cheese browned crust and fresh oregano in a diner ambiance with warm amber lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUxbuEfRkPTwla4ki726GWGBq_YzIn8qd8marjVroQoMoVkEoSZA5YcSOootCHeHOA87AYWJW65YfER3nDyEGLS2Rngo9SQbaN7RmD51tsbKFAFpmG5gYlsnjOi9iTzBtfISaKcVQZFNQ5XaA0VqH_RyIV_RC2iDEE2b7_wLuii0WYxJi28RN94YOVGxpU-C60PyAVAi1FfU2Oh9hwKaKVHaD0N4aAExGqWFKKyXE2PLQwWSqvL_GHiA"/>
+<span class="absolute top-2 left-2 bg-tertiary-container text-on-tertiary-container px-space-sm py-0.5 rounded-full font-label-sm text-label-sm font-bold uppercase shadow-[1px_1px_0px_#261815]">Diner Favorite</span>
+</div>
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Lizzie's Cheese Pie</h3>
+<span class="item-price font-headline-sm text-headline-sm text-primary font-bold" data-base="12.00">$12.00</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  Signature 3-cheese blend: low-moisture aged mozzarella, fresh curd, and 24-month parmigiano reggiano.
+                </p>
+<!-- Size Selector (HAS SIZES) -->
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1">Select Size:</span>
+<div class="grid grid-cols-3 gap-space-xs size-selector">
+<button class="size-btn active-size bg-primary text-on-primary py-1.5 px-2 rounded-full font-label-sm text-label-sm text-center shadow-[1px_1px_0px_#261815] transition-transform" data-price="12.00" data-size='Small 10"' type="button">
+                      10" $12.00
+                    </button>
+<button class="size-btn bg-surface-container-highest text-on-surface hover:bg-surface-container py-1.5 px-2 rounded-full font-label-sm text-label-sm text-center transition-colors" data-price="16.00" data-size='Medium 14"' type="button">
+                      14" $16.00
+                    </button>
+<button class="size-btn bg-surface-container-highest text-on-surface hover:bg-surface-container py-1.5 px-2 rounded-full font-label-sm text-label-sm text-center transition-colors" data-price="19.50" data-size='Large 16"' type="button">
+                      16" $19.50
+                    </button>
+</div>
+</div>
+</div>
+<!-- Stepper & Add -->
+<div class="flex items-center justify-between pt-space-sm bg-surface-container rounded px-space-sm py-space-xs">
+<div class="flex items-center bg-surface rounded-full shadow-[1px_1px_0px_#261815] p-0.5">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm decrease-btn" type="button">−</button>
+<span class="qty-display w-7 text-center font-label-md text-label-md font-bold text-on-surface">1</span>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm increase-btn" type="button">+</button>
+</div>
+<button class="add-to-cart-btn bg-primary text-on-primary px-space-md py-space-xs rounded-full font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#261815] hover:scale-105 active:scale-95 transition-transform flex items-center gap-1" type="button">
+<span>Add to Order</span>
+<span class="material-symbols-outlined text-label-md">add_circle</span>
+</button>
+</div>
+</div>
+<!-- Pizza 3: Eggplant Parm Pizza (HAS SIZES) -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between shadow-[2px_2px_0px_#261815] hover:shadow-[4px_4px_0px_#261815] transition-all" data-item="eggplant">
+<div>
+<div class="relative w-full h-44 rounded bg-surface-container-high overflow-hidden mb-space-sm">
+<img class="w-full h-full object-cover" data-alt="Artisanal eggplant parmesan pizza topped with crispy breaded fried eggplant rounds, whipped ricotta dollops and fresh green basil on rustic sourdough crust" src="https://lh3.googleusercontent.com/aida-public/AB6AXuConFrrnZFbJb44E1-yPD5AxZgQqU0hzN9tYNy9Z7bP4yu3xJTt2IlQUA0CiCzQQRawZr1CjfW9VqLEz2kCBjcflI6YzGwYmDAk-EaWbsukM4zaeJEKJRERjyzXk81dixI3gdVh_CwhFIk2zNCjWESA-YM7jGUh6aL6qFDb-Q8gkAlFp4y_LH6sEquXfixn5LAx2sayZjwlOl12-lHztpNegsGk5R9ixYOmxQZaRyvMKei2-TrucBlMwg"/>
+<span class="absolute top-2 left-2 bg-surface-container-highest text-on-surface px-space-sm py-0.5 rounded-full font-label-sm text-label-sm font-bold uppercase shadow-[1px_1px_0px_#261815]">Vegetarian</span>
+</div>
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Eggplant Parm Pie</h3>
+<span class="item-price font-headline-sm text-headline-sm text-primary font-bold" data-base="15.00">$15.00</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  Crispy breaded Japanese eggplant, whole milk ricotta clouds, garlic oil, and torn sweet basil.
+                </p>
+<!-- Size Selector (HAS SIZES) -->
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1">Select Size:</span>
+<div class="grid grid-cols-3 gap-space-xs size-selector">
+<button class="size-btn active-size bg-primary text-on-primary py-1.5 px-2 rounded-full font-label-sm text-label-sm text-center shadow-[1px_1px_0px_#261815] transition-transform" data-price="15.00" data-size='Small 10"' type="button">
+                      10" $15.00
+                    </button>
+<button class="size-btn bg-surface-container-highest text-on-surface hover:bg-surface-container py-1.5 px-2 rounded-full font-label-sm text-label-sm text-center transition-colors" data-price="19.50" data-size='Medium 14"' type="button">
+                      14" $19.50
+                    </button>
+<button class="size-btn bg-surface-container-highest text-on-surface hover:bg-surface-container py-1.5 px-2 rounded-full font-label-sm text-label-sm text-center transition-colors" data-price="23.00" data-size='Large 16"' type="button">
+                      16" $23.00
+                    </button>
+</div>
+</div>
+</div>
+<!-- Stepper & Add -->
+<div class="flex items-center justify-between pt-space-sm bg-surface-container rounded px-space-sm py-space-xs">
+<div class="flex items-center bg-surface rounded-full shadow-[1px_1px_0px_#261815] p-0.5">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm decrease-btn" type="button">−</button>
+<span class="qty-display w-7 text-center font-label-md text-label-md font-bold text-on-surface">1</span>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm increase-btn" type="button">+</button>
+</div>
+<button class="add-to-cart-btn bg-primary text-on-primary px-space-md py-space-xs rounded-full font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#261815] hover:scale-105 active:scale-95 transition-transform flex items-center gap-1" type="button">
+<span>Add to Order</span>
+<span class="material-symbols-outlined text-label-md">add_circle</span>
+</button>
+</div>
+</div>
+<!-- Pizza 4: Margherita Pizza (SINGLE SIZE ONLY - NO SELECTOR) -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between shadow-[2px_2px_0px_#261815] hover:shadow-[4px_4px_0px_#261815] transition-all" data-item="margherita">
+<div>
+<div class="relative w-full h-44 rounded bg-surface-container-high overflow-hidden mb-space-sm">
+<img class="w-full h-full object-cover" data-alt="Classic Margherita pizza fresh out of the stone oven with fresh buffalo mozzarella rounds San Marzano sauce puddles and toasted basil leaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLGhlIt4V1ROb123uUGVPYyGGdctHgnq5v2aeRoasP0Q2-C4Vt24fgB2yNXUycmYUvL_c2a-irsRUQibO11KNUg1auSe2bLDfrl-n1Z8Lgp2VGGQYREpRARXOEnySIBjphv1ts6lJj2l2_Oqxy6K3rPKI6Pr2xZY818QtI4FrEIWG6pOOkIY_ObZznEF4HKW6Qxi53a7UONwG5oBU9bF_IqvXv1Jll54M1z2apbQpJ2PBZTRJgPZ6vbg"/>
+<span class="absolute top-2 left-2 bg-surface px-space-sm py-0.5 rounded-full font-label-sm text-label-sm font-bold uppercase text-on-surface shadow-[1px_1px_0px_#261815]">Fixed Classic 14"</span>
+</div>
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Margherita Classica</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Single Size: 14" Classic</span>
+</div>
+<span class="item-price font-headline-sm text-headline-sm text-primary font-bold" data-base="17.00">$17.00</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  San Marzano D.O.P. tomatoes, fresh fior di latte mozzarella, Sicilian extra virgin olive oil, and fresh garden basil.
+                </p>
+<!-- NOTE: NO size selector rendered here per strict instruction -->
+<div class="p-space-xs rounded-full bg-surface-container-high/60 text-center mb-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Standard 14" Hearth Baked Single Size</span>
+</div>
+</div>
+<!-- Stepper & Add -->
+<div class="flex items-center justify-between pt-space-sm bg-surface-container rounded px-space-sm py-space-xs">
+<div class="flex items-center bg-surface rounded-full shadow-[1px_1px_0px_#261815] p-0.5">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm decrease-btn" type="button">−</button>
+<span class="qty-display w-7 text-center font-label-md text-label-md font-bold text-on-surface">0</span>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm increase-btn" type="button">+</button>
+</div>
+<button class="add-to-cart-btn bg-primary text-on-primary px-space-md py-space-xs rounded-full font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#261815] hover:scale-105 active:scale-95 transition-transform flex items-center gap-1" type="button">
+<span>Add to Order</span>
+<span class="material-symbols-outlined text-label-md">add_circle</span>
+</button>
+</div>
+</div>
+<!-- Pizza 5: Sausage & Hot Honey (SINGLE SIZE ONLY - NO SELECTOR) -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between shadow-[2px_2px_0px_#261815] hover:shadow-[4px_4px_0px_#261815] transition-all md:col-span-2" data-item="sausage-honey">
+<div class="flex flex-col md:flex-row gap-space-md">
+<div class="relative w-full md:w-64 h-44 rounded bg-surface-container-high overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Wood-fired pizza topped with crumbled fennel sausage caramelized onions and a spicy chili hot honey drizzle in a cozy warm diner booth setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBamXfjZZuVERYdxg0u20kOeRl4TR-Mx799TCtUN-DXbRmjnENZmYytj7xWSim3bPG7XJh2WaMlu3_AzrqawOTFVwPzG7xW36yU0mNhd99k2PgNBxLTkKnj5bmQZ5FJ1Gt5aP5pc6h6GD6AGh322XnbKm94K0FGp0PWNBZHzpMxkev60Un5xz8Y5vU4P1sKtPWsZbdRiQng_XqmEG9KtFz3XdBLFxq71rh3uAEVD2BsblUATSflnShcw"/>
+<span class="absolute top-2 left-2 bg-primary text-on-primary px-space-sm py-0.5 rounded-full font-label-sm text-label-sm font-bold uppercase shadow-[1px_1px_0px_#261815]">House Specialty</span>
+</div>
+<div class="flex flex-col justify-between w-full">
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Sausage &amp; Mike's Hot Honey</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Single Size: 14" Classic Hearth Pie</span>
+</div>
+<span class="item-price font-headline-sm text-headline-sm text-primary font-bold" data-base="20.00">$20.00</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+                      Sweet fennel Italian sausage crumbles, pickled red chilis, smoked scamorza cheese, and a generous post-bake drizzle of spicy habanero wildflower honey.
+                    </p>
+<div class="inline-block px-space-md py-1 bg-surface-container-high rounded-full font-label-sm text-label-sm text-on-secondary-container">
+                      Authentic 14-inch Single Hearth Format
+                    </div>
+</div>
+<!-- Stepper & Add -->
+<div class="flex items-center justify-between pt-space-sm bg-surface-container rounded px-space-sm py-space-xs mt-space-sm">
+<div class="flex items-center bg-surface rounded-full shadow-[1px_1px_0px_#261815] p-0.5">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm decrease-btn" type="button">−</button>
+<span class="qty-display w-7 text-center font-label-md text-label-md font-bold text-on-surface">0</span>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm increase-btn" type="button">+</button>
+</div>
+<button class="add-to-cart-btn bg-primary text-on-primary px-space-md py-space-xs rounded-full font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#261815] hover:scale-105 active:scale-95 transition-transform flex items-center gap-1" type="button">
+<span>Add to Order</span>
+<span class="material-symbols-outlined text-label-md">add_circle</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= SECTION 2: SIDES ================= -->
+<section class="scroll-mt-36 pt-space-sm" id="section-sides">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Category 02</span>
+<span class="h-1 w-6 bg-primary rounded-full"></span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight">Diner Sides &amp; Starters</h2>
+</div>
+<span class="bg-surface-container px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant font-bold hidden sm:inline-block">Golden &amp; Crunchy</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Side 1: Seasoned Crispy Fries (HAS SIZES) -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between shadow-[2px_2px_0px_#261815] hover:shadow-[4px_4px_0px_#261815] transition-all" data-item="fries">
+<div>
+<div class="relative w-full h-40 rounded bg-surface-container-high overflow-hidden mb-space-sm">
+<img class="w-full h-full object-cover" data-alt="Basket of golden crinkle-cut crispy diner fries dusted with rosemary garlic salt served in red checkerboard wax paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQHCv98sKbi70NGNvsPpnfRCV6nNulh3Zn7262lWlOL9AH9nlwUobq7AYKvERNqk60ZdJ5Eq1xtQv7iCOSwZZzOPt0QVWO5jbXB9a4hNlIFbJC93iTcQGQAKpMQY7uxzU_jvdu4oy_CGlEPPNLylLTvguDcd1lE9P6jcNxSflNvSX4DeDMuzDf8JM4zQVdbpEjY5EkLE8fbZZQs-ZtqV4hEx1zamco3NA99zcRFdSQrbz5uauk7AoD8g"/>
+<span class="absolute top-2 left-2 bg-primary text-on-primary px-space-sm py-0.5 rounded-full font-label-sm text-label-sm font-bold uppercase shadow-[1px_1px_0px_#261815]">Crispy Goodness</span>
+</div>
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Seasoned Crispy Fries</h3>
+<span class="item-price font-headline-sm text-headline-sm text-primary font-bold" data-base="4.50">$4.50</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  Double-fried Russet potatoes tossed in oregano, garlic salt, and cracked black pepper.
+                </p>
+<!-- Size Selector (HAS SIZES) -->
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1">Select Size:</span>
+<div class="grid grid-cols-2 gap-space-xs size-selector">
+<button class="size-btn active-size bg-primary text-on-primary py-1.5 px-2 rounded-full font-label-sm text-label-sm text-center shadow-[1px_1px_0px_#261815] transition-transform" data-price="4.50" data-size="Regular" type="button">
+                      Regular $4.50
+                    </button>
+<button class="size-btn bg-surface-container-highest text-on-surface hover:bg-surface-container py-1.5 px-2 rounded-full font-label-sm text-label-sm text-center transition-colors" data-price="6.50" data-size="Large" type="button">
+                      Large $6.50
+                    </button>
+</div>
+</div>
+</div>
+<!-- Stepper & Add -->
+<div class="flex items-center justify-between pt-space-sm bg-surface-container rounded px-space-sm py-space-xs">
+<div class="flex items-center bg-surface rounded-full shadow-[1px_1px_0px_#261815] p-0.5">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm decrease-btn" type="button">−</button>
+<span class="qty-display w-7 text-center font-label-md text-label-md font-bold text-on-surface">1</span>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm increase-btn" type="button">+</button>
+</div>
+<button class="add-to-cart-btn bg-primary text-on-primary px-space-md py-space-xs rounded-full font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#261815] hover:scale-105 active:scale-95 transition-transform flex items-center gap-1" type="button">
+<span>Add to Order</span>
+<span class="material-symbols-outlined text-label-md">add_circle</span>
+</button>
+</div>
+</div>
+<!-- Side 2: Garlic Knots (SINGLE SIZE ONLY - NO SELECTOR) -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between shadow-[2px_2px_0px_#261815] hover:shadow-[4px_4px_0px_#261815] transition-all" data-item="garlic-knots">
+<div>
+<div class="relative w-full h-40 rounded bg-surface-container-high overflow-hidden mb-space-sm">
+<img class="w-full h-full object-cover" data-alt="Warm fluffy baked sourdough garlic knots brushed with chopped parsley garlic butter served with a small bowl of steaming red marinara" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD94g8x1dXjbjtVPGbpt8Smjxr6Tm8SueSDnEvInGG9QQ0C_h1PF30KL5JQo7zyYrd-ZHKJ1HnK9p1bOYak8EyrehWAvQOXcNXroS_geXveUp2hlQX_Ljwl1mHbT3rOx7n5M0qhhc_R_cs4GyXo6mYxlKt5LZoGfSXjAGNO1uE7yjxPM4_vE6IjZkyN4YgClbiEEtvZCtfJ7e9oxO0kL7L9hDIoeZPk3Do3v2OE9M4cSvozIMDg5Nr-Lw"/>
+<span class="absolute top-2 left-2 bg-tertiary-container text-on-tertiary-container px-space-sm py-0.5 rounded-full font-label-sm text-label-sm font-bold uppercase shadow-[1px_1px_0px_#261815]">Crowd Favorite</span>
+</div>
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Garlic Knots</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">6 pcs with warm marinara</span>
+</div>
+<span class="item-price font-headline-sm text-headline-sm text-primary font-bold" data-base="6.00">$6.00</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  Fresh baked dough tied by hand, bathed in crushed garlic, melted butter, parmesan, and fresh parsley.
+                </p>
+<!-- NO size selector per instructions -->
+<div class="p-space-xs rounded-full bg-surface-container-high/60 text-center mb-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Order of 6 freshly baked knots</span>
+</div>
+</div>
+<!-- Stepper & Add -->
+<div class="flex items-center justify-between pt-space-sm bg-surface-container rounded px-space-sm py-space-xs">
+<div class="flex items-center bg-surface rounded-full shadow-[1px_1px_0px_#261815] p-0.5">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm decrease-btn" type="button">−</button>
+<span class="qty-display w-7 text-center font-label-md text-label-md font-bold text-on-surface">0</span>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm increase-btn" type="button">+</button>
+</div>
+<button class="add-to-cart-btn bg-primary text-on-primary px-space-md py-space-xs rounded-full font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#261815] hover:scale-105 active:scale-95 transition-transform flex items-center gap-1" type="button">
+<span>Add to Order</span>
+<span class="material-symbols-outlined text-label-md">add_circle</span>
+</button>
+</div>
+</div>
+<!-- Side 3: Mozzarella Sticks (SINGLE SIZE ONLY - NO SELECTOR) -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between shadow-[2px_2px_0px_#261815] hover:shadow-[4px_4px_0px_#261815] transition-all" data-item="mozz-sticks">
+<div>
+<div class="relative w-full h-40 rounded bg-surface-container-high overflow-hidden mb-space-sm">
+<img class="w-full h-full object-cover" data-alt="Golden brown fried mozzarella sticks with extreme stretchy cheese pull dipping into bright red tomato sauce" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMKgHpGfv1DkvEeWloRXwKDfNjAQ2ztcwj6zoWfx8jn8WiMBNnpY15X-C_2-EqQ23oVcsZTCy3HYObqvdRh97Igp_dVbMjADsteA9AWyGkLkhxf7TNInk-XwOz9alYKqQWdoQT8hx-9EgQzbrGlJWFY2iApWF7Gtdez3uTq7Rj5qPd0AsEiuK3wnBU6tnZZWFUwc3pogBVPf29id0kyZhWBioY2uMWXNt6hBWLmnvh9yEALrwj43fuYg"/>
+</div>
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Mozzarella Sticks</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">6 pcs golden crusted</span>
+</div>
+<span class="item-price font-headline-sm text-headline-sm text-primary font-bold" data-base="8.00">$8.00</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  Hand-cut whole milk mozzarella coated in seasoned Italian breadcrumbs. Served with warm marinara.
+                </p>
+<!-- NO size selector per instructions -->
+<div class="p-space-xs rounded-full bg-surface-container-high/60 text-center mb-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Standard portion of 6 cheese sticks</span>
+</div>
+</div>
+<!-- Stepper & Add -->
+<div class="flex items-center justify-between pt-space-sm bg-surface-container rounded px-space-sm py-space-xs">
+<div class="flex items-center bg-surface rounded-full shadow-[1px_1px_0px_#261815] p-0.5">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm decrease-btn" type="button">−</button>
+<span class="qty-display w-7 text-center font-label-md text-label-md font-bold text-on-surface">0</span>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm increase-btn" type="button">+</button>
+</div>
+<button class="add-to-cart-btn bg-primary text-on-primary px-space-md py-space-xs rounded-full font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#261815] hover:scale-105 active:scale-95 transition-transform flex items-center gap-1" type="button">
+<span>Add to Order</span>
+<span class="material-symbols-outlined text-label-md">add_circle</span>
+</button>
+</div>
+</div>
+<!-- Side 4: Caesar Salad (SINGLE SIZE ONLY - NO SELECTOR) -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between shadow-[2px_2px_0px_#261815] hover:shadow-[4px_4px_0px_#261815] transition-all" data-item="caesar">
+<div>
+<div class="relative w-full h-40 rounded bg-surface-container-high overflow-hidden mb-space-sm">
+<img class="w-full h-full object-cover" data-alt="Chilled crisp romaine lettuce Caesar salad with shaved aged parmesan cheese, golden sourdough croutons and creamy anchovy dressing in a diner bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR7hpEknBjFiwDxQP3q8Q28aat00D4YnjQxT6cNMfzjUs7U5JDufPHyuuxqVO_tMpo5CeW8n6i7egnqrvYTq0j1GQPpkOQ2_wIcLTa9snLhLtDt-bJbFsx0gEgYZJDGSIz5qUis9q0g9rhkP_LNS7GDaANRjpg1rJiSRfuLQFvfGxPA3BXmkqkl_0cQvlITscy3Ziui1efp3UBCukbIhVtTKeYxMoanPlQtRgrV4fulRJ1cHLu2031VA"/>
+</div>
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Little Italy Caesar</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">House croutons &amp; shaved parm</span>
+</div>
+<span class="item-price font-headline-sm text-headline-sm text-primary font-bold" data-base="9.00">$9.00</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  Crisp chopped romaine, house-baked garlic croutons, cracked peppercorn, and creamy pecorino dressing.
+                </p>
+<!-- NO size selector per instructions -->
+<div class="p-space-xs rounded-full bg-surface-container-high/60 text-center mb-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Individual entree-size diner bowl</span>
+</div>
+</div>
+<!-- Stepper & Add -->
+<div class="flex items-center justify-between pt-space-sm bg-surface-container rounded px-space-sm py-space-xs">
+<div class="flex items-center bg-surface rounded-full shadow-[1px_1px_0px_#261815] p-0.5">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm decrease-btn" type="button">−</button>
+<span class="qty-display w-7 text-center font-label-md text-label-md font-bold text-on-surface">0</span>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm increase-btn" type="button">+</button>
+</div>
+<button class="add-to-cart-btn bg-primary text-on-primary px-space-md py-space-xs rounded-full font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#261815] hover:scale-105 active:scale-95 transition-transform flex items-center gap-1" type="button">
+<span>Add to Order</span>
+<span class="material-symbols-outlined text-label-md">add_circle</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= SECTION 3: DRINKS ================= -->
+<section class="scroll-mt-36 pt-space-sm" id="section-drinks">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Category 03</span>
+<span class="h-1 w-6 bg-primary rounded-full"></span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface tracking-tight">Cold Beverages &amp; Sodas</h2>
+</div>
+<span class="bg-surface-container px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant font-bold hidden sm:inline-block">Ice Cold</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Drink 1: Coca-Cola (HAS SIZES) -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between shadow-[2px_2px_0px_#261815] hover:shadow-[4px_4px_0px_#261815] transition-all" data-item="coke">
+<div>
+<div class="relative w-full h-36 rounded bg-surface-container-high overflow-hidden mb-space-sm flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Chilled vintage Coca-Cola can with condensation droplets next to an ice-filled diner tumbler glass with red striped straw" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABBbiM3lR4aNNIN6yeGugQlePsD_SCWvcA5-O-l2DRwRwhbOPRoMDAS_hVheLhf2zIEDde960JOyAO27uAn-sj6JpxYzgTLH4R4JeNZm3J5GUZySkM5Gl6vKfoEnkiVYXghnzMuEWvvr4tlDnYwXRE7YhvlCZnMAVTBOCTLXz0tj7TjlnbGgV9sU1ukWeRUfYvPcobJSvZ7K3NFHLVz3vI_qfHmLuhxrcyFKLGfs94WTNH31OiwZCVRQ"/>
+</div>
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Coca-Cola Classic</h3>
+<span class="item-price font-headline-sm text-headline-sm text-primary font-bold" data-base="2.00">$2.00</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  Original formula, served frosty cold with optional ice cup.
+                </p>
+<!-- Size Selector (HAS SIZES) -->
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1">Select Size:</span>
+<div class="grid grid-cols-3 gap-space-xs size-selector">
+<button class="size-btn active-size bg-primary text-on-primary py-1.5 px-2 rounded-full font-label-sm text-label-sm text-center shadow-[1px_1px_0px_#261815] transition-transform" data-price="2.00" data-size="Can 12oz" type="button">
+                      Can $2.00
+                    </button>
+<button class="size-btn bg-surface-container-highest text-on-surface hover:bg-surface-container py-1.5 px-2 rounded-full font-label-sm text-label-sm text-center transition-colors" data-price="3.00" data-size="Bottle 20oz" type="button">
+                      20oz $3.00
+                    </button>
+<button class="size-btn bg-surface-container-highest text-on-surface hover:bg-surface-container py-1.5 px-2 rounded-full font-label-sm text-label-sm text-center transition-colors" data-price="4.50" data-size="2-Liter" type="button">
+                      2-Liter $4.50
+                    </button>
+</div>
+</div>
+</div>
+<!-- Stepper & Add -->
+<div class="flex items-center justify-between pt-space-sm bg-surface-container rounded px-space-sm py-space-xs">
+<div class="flex items-center bg-surface rounded-full shadow-[1px_1px_0px_#261815] p-0.5">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm decrease-btn" type="button">−</button>
+<span class="qty-display w-7 text-center font-label-md text-label-md font-bold text-on-surface">2</span>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm increase-btn" type="button">+</button>
+</div>
+<button class="add-to-cart-btn bg-primary text-on-primary px-space-md py-space-xs rounded-full font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#261815] hover:scale-105 active:scale-95 transition-transform flex items-center gap-1" type="button">
+<span>Add to Order</span>
+<span class="material-symbols-outlined text-label-md">add_circle</span>
+</button>
+</div>
+</div>
+<!-- Drink 2: Sprite (HAS SIZES) -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between shadow-[2px_2px_0px_#261815] hover:shadow-[4px_4px_0px_#261815] transition-all" data-item="sprite">
+<div>
+<div class="relative w-full h-36 rounded bg-surface-container-high overflow-hidden mb-space-sm flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Chilled Sprite green can surrounded by crushed ice cubes with lemon and lime wedges against a retro diner counter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg_nQuNG0v-NjBRzgj-vlNYVT0qw4pHa_eE1LRcPETh_GSn6q-a8sOFIdXTT09rm9XF-1CVnNlSqIaF0r7v0GUWJffpLi1ClJlAUt7oEus-GAbeBhhaI5MmBa_PqRXpGmr55w7c6DX8FL2UadZDuPFWjxolIB7HbNJ4zWd3G0B0sgNDPhfFlPW0VCxsYdSuiSU2oIvPPOb0dqMRD02qqUMyHuXxdy0LkP72v0J_IKySZCjgobHF0MIiA"/>
+</div>
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Crisp Sprite</h3>
+<span class="item-price font-headline-sm text-headline-sm text-primary font-bold" data-base="2.00">$2.00</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  Clean, crisp lemon-lime refreshment.
+                </p>
+<!-- Size Selector (HAS SIZES) -->
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1">Select Size:</span>
+<div class="grid grid-cols-3 gap-space-xs size-selector">
+<button class="size-btn active-size bg-primary text-on-primary py-1.5 px-2 rounded-full font-label-sm text-label-sm text-center shadow-[1px_1px_0px_#261815] transition-transform" data-price="2.00" data-size="Can 12oz" type="button">
+                      Can $2.00
+                    </button>
+<button class="size-btn bg-surface-container-highest text-on-surface hover:bg-surface-container py-1.5 px-2 rounded-full font-label-sm text-label-sm text-center transition-colors" data-price="3.00" data-size="Bottle 20oz" type="button">
+                      20oz $3.00
+                    </button>
+<button class="size-btn bg-surface-container-highest text-on-surface hover:bg-surface-container py-1.5 px-2 rounded-full font-label-sm text-label-sm text-center transition-colors" data-price="4.50" data-size="2-Liter" type="button">
+                      2-Liter $4.50
+                    </button>
+</div>
+</div>
+</div>
+<!-- Stepper & Add -->
+<div class="flex items-center justify-between pt-space-sm bg-surface-container rounded px-space-sm py-space-xs">
+<div class="flex items-center bg-surface rounded-full shadow-[1px_1px_0px_#261815] p-0.5">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm decrease-btn" type="button">−</button>
+<span class="qty-display w-7 text-center font-label-md text-label-md font-bold text-on-surface">1</span>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm increase-btn" type="button">+</button>
+</div>
+<button class="add-to-cart-btn bg-primary text-on-primary px-space-md py-space-xs rounded-full font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#261815] hover:scale-105 active:scale-95 transition-transform flex items-center gap-1" type="button">
+<span>Add to Order</span>
+<span class="material-symbols-outlined text-label-md">add_circle</span>
+</button>
+</div>
+</div>
+<!-- Drink 3: Mexican Coke Glass Bottle (SINGLE SIZE ONLY - NO SELECTOR) -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between shadow-[2px_2px_0px_#261815] hover:shadow-[4px_4px_0px_#261815] transition-all" data-item="mexican-coke">
+<div>
+<div class="relative w-full h-36 rounded bg-surface-container-high overflow-hidden mb-space-sm flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Traditional glass bottle Mexican Coca-Cola with real cane sugar sweating cold with silver bottle opener nearby" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8HVeIbnYMGH-Lw1-olMZe_NSfVSnG_6Gm4txLRBs4nVO3YCvuVpIlPeDNc5f6lVhWV4XTFCm818gQtwu4vflww-wm0FFoOWEHOFASUKfFrI1yQJmyN6ggmLeSpRYy-n0fV8t2lVRv6-LJHO7Yp_ee_dgSqDG7pcO-WgbfkEYjb-m50gmGk7tG0n9NAjXaX66Mci6INzuzt3r9Fmr9sbwT49MFOrM3i4Um1e43C73UrPbhrL0dYOtExQ"/>
+<span class="absolute top-2 left-2 bg-tertiary text-on-tertiary px-space-sm py-0.5 rounded-full font-label-sm text-label-sm font-bold uppercase shadow-[1px_1px_0px_#261815]">Real Cane Sugar</span>
+</div>
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Mexican Glass Bottle Coke</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Single Size: 355ml Glass Bottle</span>
+</div>
+<span class="item-price font-headline-sm text-headline-sm text-primary font-bold" data-base="3.50">$3.50</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  Imported vintage bottle sweetened exclusively with 100% pure cane sugar.
+                </p>
+<!-- NO size selector per instructions -->
+<div class="p-space-xs rounded-full bg-surface-container-high/60 text-center mb-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Single 355ml Glass Bottle</span>
+</div>
+</div>
+<!-- Stepper & Add -->
+<div class="flex items-center justify-between pt-space-sm bg-surface-container rounded px-space-sm py-space-xs">
+<div class="flex items-center bg-surface rounded-full shadow-[1px_1px_0px_#261815] p-0.5">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm decrease-btn" type="button">−</button>
+<span class="qty-display w-7 text-center font-label-md text-label-md font-bold text-on-surface">0</span>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm increase-btn" type="button">+</button>
+</div>
+<button class="add-to-cart-btn bg-primary text-on-primary px-space-md py-space-xs rounded-full font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#261815] hover:scale-105 active:scale-95 transition-transform flex items-center gap-1" type="button">
+<span>Add to Order</span>
+<span class="material-symbols-outlined text-label-md">add_circle</span>
+</button>
+</div>
+</div>
+<!-- Drink 4: San Pellegrino Sparkling Water (SINGLE SIZE ONLY - NO SELECTOR) -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between shadow-[2px_2px_0px_#261815] hover:shadow-[4px_4px_0px_#261815] transition-all" data-item="san-pellegrino">
+<div>
+<div class="relative w-full h-36 rounded bg-surface-container-high overflow-hidden mb-space-sm flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Green glass bottle of San Pellegrino sparkling Italian mineral water poured into a retro diner glass with bubbles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdeb14u-FZ2KtvMHKU5uCUsev7kH5SzX6X-3Bk4E08hK0gsamugJU6eGqbpJkPwA2TWqj9hOoRmth766GAmxD_zDU3bfxsugACRWiLA7RG9YeEih1TtltF0BOl4r9rLwqAcm5aLY01ASN1SDZjAoX-8kH1Z9HGdnVBFHGJBgZaA_2R1cP5JwjvBsUIcVot6RIopKBCI7CFM17oDETUFMfxb8aFaNKesD1harC7LBizb7-Nogje9iFd4w"/>
+</div>
+<div class="flex items-start justify-between gap-space-sm mb-space-xs">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">S.Pellegrino Sparkling</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Single Size: 500ml Glass Bottle</span>
+</div>
+<span class="item-price font-headline-sm text-headline-sm text-primary font-bold" data-base="3.50">$3.50</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  Imported fine Italian sparkling natural mineral water with gentle mineral effervescence.
+                </p>
+<!-- NO size selector per instructions -->
+<div class="p-space-xs rounded-full bg-surface-container-high/60 text-center mb-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Single 500ml Bottle</span>
+</div>
+</div>
+<!-- Stepper & Add -->
+<div class="flex items-center justify-between pt-space-sm bg-surface-container rounded px-space-sm py-space-xs">
+<div class="flex items-center bg-surface rounded-full shadow-[1px_1px_0px_#261815] p-0.5">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm decrease-btn" type="button">−</button>
+<span class="qty-display w-7 text-center font-label-md text-label-md font-bold text-on-surface">0</span>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface hover:bg-surface-container-high rounded-full font-bold font-headline-sm increase-btn" type="button">+</button>
+</div>
+<button class="add-to-cart-btn bg-primary text-on-primary px-space-md py-space-xs rounded-full font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#261815] hover:scale-105 active:scale-95 transition-transform flex items-center gap-1" type="button">
+<span>Add to Order</span>
+<span class="material-symbols-outlined text-label-md">add_circle</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- RIGHT 30% Column: Persistent Visible Sticky Order Summary Panel -->
+<div class="w-full lg:w-[32%] lg:sticky lg:top-24 flex-shrink-0">
+<div class="bg-surface-container-low rounded-lg p-space-md md:p-space-lg shadow-[4px_4px_0px_#261815] flex flex-col">
+<!-- Order Panel Header -->
+<div class="flex items-center justify-between pb-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Your Tray</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-extrabold flex items-center gap-space-xs">
+                Your Order <span class="text-primary text-body-sm font-bold">(3 Items)</span>
+</h2>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">restaurant_menu</span>
+</div>
+</div>
+<!-- Delivery / Pickup Toggle -->
+<div class="my-space-md bg-surface-container-highest p-1 rounded-full flex items-center shadow-inner">
+<button class="flex-1 py-space-xs rounded-full bg-primary text-on-primary font-label-md text-label-md uppercase font-bold text-center shadow-[1px_1px_0px_#261815] transition-all" type="button">
+              Delivery
+            </button>
+<button class="flex-1 py-space-xs rounded-full text-on-surface-variant font-label-md text-label-md uppercase font-bold text-center hover:text-on-surface transition-all" type="button">
+              Pickup (15m)
+            </button>
+</div>
+<!-- Delivery ETA Badge -->
+<div class="bg-surface-container px-space-md py-space-xs rounded-full flex items-center justify-between font-label-sm text-label-sm text-on-surface mb-space-md">
+<span class="flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-primary text-body-md">moped</span>
+              Est. Delivery:
+            </span>
+<span class="font-bold text-primary">25 – 35 min</span>
+</div>
+<!-- Order Items Breakdown (Preloaded with Prompt Spec) -->
+<div class="flex flex-col gap-space-sm max-h-[380px] overflow-y-auto pr-1">
+<!-- Item 1: 1 x Large 16" Pepperoni -->
+<div class="bg-surface p-space-sm rounded shadow-[1px_1px_0px_#261815] flex items-start justify-between gap-space-xs">
+<div class="flex items-start gap-space-xs">
+<span class="font-label-md text-label-md bg-primary-fixed text-on-primary-fixed-variant px-1.5 py-0.5 rounded font-bold">1×</span>
+<div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface leading-tight">Pepperoni Pizza</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Large (16")</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">$22.00</span>
+<button class="block text-primary hover:underline font-label-sm text-label-sm" type="button">remove</button>
+</div>
+</div>
+<!-- Item 2: 1 x Large Fries -->
+<div class="bg-surface p-space-sm rounded shadow-[1px_1px_0px_#261815] flex items-start justify-between gap-space-xs">
+<div class="flex items-start gap-space-xs">
+<span class="font-label-md text-label-md bg-primary-fixed text-on-primary-fixed-variant px-1.5 py-0.5 rounded font-bold">1×</span>
+<div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface leading-tight">Crispy Fries</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Large Size</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">$6.50</span>
+<button class="block text-primary hover:underline font-label-sm text-label-sm" type="button">remove</button>
+</div>
+</div>
+<!-- Item 3: 2 x Can 12oz Coca-Cola -->
+<div class="bg-surface p-space-sm rounded shadow-[1px_1px_0px_#261815] flex items-start justify-between gap-space-xs">
+<div class="flex items-start gap-space-xs">
+<span class="font-label-md text-label-md bg-primary-fixed text-on-primary-fixed-variant px-1.5 py-0.5 rounded font-bold">2×</span>
+<div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface leading-tight">Coca-Cola</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Can (12oz) • $2.00 ea</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">$4.00</span>
+<button class="block text-primary hover:underline font-label-sm text-label-sm" type="button">remove</button>
+</div>
+</div>
+<!-- Item 4: 1 x Garlic Knots -->
+<div class="bg-surface p-space-sm rounded shadow-[1px_1px_0px_#261815] flex items-start justify-between gap-space-xs">
+<div class="flex items-start gap-space-xs">
+<span class="font-label-md text-label-md bg-primary-fixed text-on-primary-fixed-variant px-1.5 py-0.5 rounded font-bold">1×</span>
+<div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface leading-tight">Garlic Knots</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">6 pcs w/ warm marinara</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">$6.00</span>
+<button class="block text-primary hover:underline font-label-sm text-label-sm" type="button">remove</button>
+</div>
+</div>
+</div>
+<!-- Special Diner Note Input -->
+<div class="my-space-md">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm uppercase mb-1">
+<span class="material-symbols-outlined text-label-md">edit_note</span>
+<span>Kitchen / Delivery Notes</span>
+</div>
+<input class="w-full bg-surface-container-lowest text-on-surface text-body-sm font-body-sm px-space-md py-space-xs rounded-full shadow-[1px_1px_0px_#261815] focus:outline-none" placeholder="e.g. Extra crisp crust, leave at door..." type="text"/>
+</div>
+<!-- Price Calculation Tally -->
+<div class="space-y-1 pt-space-sm bg-surface p-space-md rounded shadow-[2px_2px_0px_#261815] mb-space-md">
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Subtotal (4 items):</span>
+<span class="font-bold text-on-surface">$38.50</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Tax (8.875% NYC):</span>
+<span class="font-bold text-on-surface">$3.42</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Delivery Fee:</span>
+<span class="text-emerald-700 font-bold uppercase text-label-sm">FREE</span>
+</div>
+<div class="pt-space-xs mt- space-xs flex items-center justify-between font-headline-sm text-headline-sm text-on-surface">
+<span class="font-extrabold">Estimated Total:</span>
+<span class="text-primary font-black">$41.92</span>
+</div>
+</div>
+<!-- Primary Red Call to Action -->
+<a class="w-full py-space-md px-space-md bg-primary hover:bg-primary-container text-on-primary rounded-full font-headline-sm text-headline-sm uppercase tracking-wider text-center shadow-[3px_3px_0px_#261815] hover:scale-[1.02] active:translate-y-0.5 active:shadow-none transition-all flex items-center justify-between group" data-path="checkout-review-order" href="#">
+<span class="font-extrabold">Ready to Pay →</span>
+<span class="bg-surface text-primary px-space-md py-1 rounded-full font-label-lg text-label-lg font-extrabold shadow-[1px_1px_0px_#261815] group-hover:scale-105 transition-transform">
+              $41.92
+            </span>
+</a>
+<!-- Diner Guarantee Tag -->
+<div class="mt-space-md text-center flex items-center justify-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary text-body-md">verified</span>
+<span>Hot &amp; Fresh Guarantee • Lizzie's Since 1976</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript for micro-interactions & size/price updates -->
+<script>
+    (function() {
+      // Size selector logic: only on cards with .size-selector
+      const cardsWithSize = document.querySelectorAll('[data-item]');
+      cardsWithSize.forEach(card => {
+        const sizeBtns = card.querySelectorAll('.size-btn');
+        const priceDisplay = card.querySelector('.item-price');
+        
+        sizeBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            // Unselect others
+            sizeBtns.forEach(b => {
+              b.classList.remove('active-size', 'bg-primary', 'text-on-primary', 'shadow-[1px_1px_0px_#261815]');
+              b.classList.add('bg-surface-container-highest', 'text-on-surface');
+            });
+            // Select clicked
+            btn.classList.add('active-size', 'bg-primary', 'text-on-primary', 'shadow-[1px_1px_0px_#261815]');
+            btn.classList.remove('bg-surface-container-highest', 'text-on-surface');
+
+            // Update card price tag
+            const price = btn.getAttribute('data-price');
+            if (priceDisplay && price) {
+              priceDisplay.textContent = '$' + parseFloat(price).toFixed(2);
+            }
+          });
+        });
+
+        // Stepper buttons (- / +)
+        const decreaseBtn = card.querySelector('.decrease-btn');
+        const increaseBtn = card.querySelector('.increase-btn');
+        const qtyDisplay = card.querySelector('.qty-display');
+
+        if (decreaseBtn && increaseBtn && qtyDisplay) {
+          decreaseBtn.addEventListener('click', () => {
+            let current = parseInt(qtyDisplay.textContent, 10) || 0;
+            if (current > 0) {
+              qtyDisplay.textContent = current - 1;
+            }
+          });
+          increaseBtn.addEventListener('click', () => {
+            let current = parseInt(qtyDisplay.textContent, 10) || 0;
+            qtyDisplay.textContent = current + 1;
+          });
+        }
+
+        // Add to order feedback micro-interaction
+        const addBtn = card.querySelector('.add-to-cart-btn');
+        if (addBtn && qtyDisplay) {
+          addBtn.addEventListener('click', () => {
+            let current = parseInt(qtyDisplay.textContent, 10) || 0;
+            if (current === 0) {
+              qtyDisplay.textContent = '1';
+            }
+            // Flash button feedback
+            const originalText = addBtn.innerHTML;
+            addBtn.innerHTML = '<span>Added! 🍕</span>';
+            setTimeout(() => {
+              addBtn.innerHTML = originalText;
+            }, 900);
+          });
+        }
+      });
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-low mt-space-xl"><div class="w-full px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-space-xl"><div><div class="inline-block bg-primary px-space-md py-space-xs rounded-full mb-space-sm"><span class="font-headline-sm text-headline-sm text-on-primary font-bold tracking-tight">Lizzie's Pizzeria</span></div><p class="font-body-md text-body-md text-on-surface-variant mt-space-sm">The eccentric 1970s neo-diner pie parlor. Naturally leavened sourdough, slow-simmered Jersey plum sauce, and hand-pulled whole milk mozzarella.</p></div><div><h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-sm uppercase tracking-tight">Diner Hours</h4><ul class="font-body-sm text-body-sm text-on-surface-variant space-y-space-xs"><li>Mon – Thu: 11:30 AM – 10:00 PM</li><li>Fri – Sat: 11:30 AM – Midnight</li><li>Sunday: 12:00 PM – 9:30 PM</li></ul></div><div><h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-sm uppercase tracking-tight">Location &amp; Dial</h4><p class="font-body-sm text-body-sm text-on-surface-variant">442 Grand Street, Corner of Mulberry<br/>Little Italy, New York, NY 10002</p><p class="font-label-md text-label-md text-primary mt-space-sm font-bold">Direct Line: (212) 555-PIZZA</p></div><div><h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-sm uppercase tracking-tight">Piezette Club</h4><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Join for secret daily slice drops, weekend disco hours, and fresh merch.</p><div class="flex items-center gap-space-xs"><input class="w-full bg-surface-container-lowest text-on-surface px-space-md py-space-sm rounded-full font-body-sm text-body-sm focus:outline-none" placeholder="Your email here..." type="email"/><button class="bg-primary text-on-primary px-space-md py-space-sm rounded-full font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#261815]">Join</button></div></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider"><p>© 1976–Present Lizzie's Pizza Parlor. Hot &amp; Fresh Always.</p><p class="text-primary font-bold">Crafted with Dough, Sauce &amp; Soul in NYC</p></div></div></footer></body></html>

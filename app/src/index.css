@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+/* Tokens copied from the Stitch design system "Neo-Diner Pizzeria". */
+@theme {
+  /* Brand palette */
+  --color-parchment: #fffdfb;
+  --color-tomato: #e02b20;
+  --color-blush: #fdecef;
+  --color-crust-gold: #d99b26;
+  --color-charred: #231512;
+
+  /* Material colors from the design system */
+  --color-background: #fff8f6;
+  --color-on-background: #261815;
+  --color-surface: #fff8f6;
+  --color-on-surface: #261815;
+  --color-surface-variant: #f8ddd7;
+  --color-on-surface-variant: #5d403b;
+  --color-surface-dim: #efd4cf;
+  --color-surface-bright: #fff8f6;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fff0ee;
+  --color-surface-container: #ffe9e5;
+  --color-surface-container-high: #fee2dc;
+  --color-surface-container-highest: #f8ddd7;
+  --color-inverse-surface: #3d2c29;
+  --color-inverse-on-surface: #ffede9;
+  --color-outline: #916f6a;
+  --color-outline-variant: #e6bdb7;
+  --color-surface-tint: #be0a0a;
+
+  --color-primary: #bb0507;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #e02b20;
+  --color-on-primary-container: #fffcff;
+  --color-inverse-primary: #ffb4a9;
+  --color-primary-fixed: #ffdad5;
+  --color-primary-fixed-dim: #ffb4a9;
+  --color-on-primary-fixed: #410000;
+  --color-on-primary-fixed-variant: #930003;
+
+  --color-secondary: #675b5e;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #efdee1;
+  --color-on-secondary-container: #6d6164;
+  --color-secondary-fixed: #efdee1;
+  --color-secondary-fixed-dim: #d2c3c6;
+  --color-on-secondary-fixed: #22191c;
+  --color-on-secondary-fixed-variant: #4f4447;
+
+  --color-tertiary: #7c5400;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #9c6b00;
+  --color-on-tertiary-container: #fffbff;
+  --color-tertiary-fixed: #ffdeae;
+  --color-tertiary-fixed-dim: #fdba45;
+  --color-on-tertiary-fixed: #281900;
+  --color-on-tertiary-fixed-variant: #604100;
+
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  /* Type families */
+  --font-headline-xl: "Bricolage Grotesque", sans-serif;
+  --font-headline-lg: "Bricolage Grotesque", sans-serif;
+  --font-headline-md: "Bricolage Grotesque", sans-serif;
+  --font-headline-sm: "Bricolage Grotesque", sans-serif;
+  --font-body-lg: "Karla", sans-serif;
+  --font-body-md: "Karla", sans-serif;
+  --font-body-sm: "Karla", sans-serif;
+  --font-label-lg: "Karla", sans-serif;
+  --font-label-md: "Karla", sans-serif;
+  --font-label-sm: "Karla", sans-serif;
+  --font-sans: "Karla", sans-serif;
+
+  /* Type scale */
+  --text-headline-xl: 56px;
+  --text-headline-xl--line-height: 60px;
+  --text-headline-xl--letter-spacing: -0.03em;
+  --text-headline-xl--font-weight: 800;
+  --text-headline-xl-mobile: 36px;
+  --text-headline-xl-mobile--line-height: 40px;
+  --text-headline-xl-mobile--letter-spacing: -0.02em;
+  --text-headline-lg: 40px;
+  --text-headline-lg--line-height: 44px;
+  --text-headline-lg--letter-spacing: -0.02em;
+  --text-headline-lg-mobile: 28px;
+  --text-headline-lg-mobile--line-height: 32px;
+  --text-headline-lg-mobile--letter-spacing: -0.01em;
+  --text-headline-md: 28px;
+  --text-headline-md--line-height: 34px;
+  --text-headline-md--letter-spacing: -0.01em;
+  --text-headline-sm: 22px;
+  --text-headline-sm--line-height: 28px;
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 26px;
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+  --text-body-sm: 14px;
+  --text-body-sm--line-height: 20px;
+  --text-label-lg: 16px;
+  --text-label-lg--line-height: 20px;
+  --text-label-lg--letter-spacing: 0.02em;
+  --text-label-md: 13px;
+  --text-label-md--line-height: 16px;
+  --text-label-md--letter-spacing: 0.03em;
+  --text-label-sm: 11px;
+  --text-label-sm--line-height: 14px;
+  --text-label-sm--letter-spacing: 0.05em;
+
+  /* Spacing scale */
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-mobile: 1rem;
+  --spacing-margin: 2.5rem;
+  --spacing-margin-mobile: 1.25rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2.5rem;
+
+  /* Pill-first shape language */
+  --radius-default: 1rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 1.5rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-full: 9999px;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-on-surface);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--color-primary-container);
+    color: var(--color-on-primary-container);
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer utilities {
+  .hard-shadow-sm {
+    box-shadow: 1px 1px 0 0 var(--color-charred);
+  }
+
+  .hard-shadow {
+    box-shadow: 2px 2px 0 0 var(--color-charred);
+  }
+
+  .hard-shadow-md {
+    box-shadow: 3px 3px 0 0 var(--color-charred);
+  }
+
+  .hard-shadow-lg {
+    box-shadow: 4px 4px 0 0 var(--color-charred);
+  }
+}
